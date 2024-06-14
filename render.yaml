@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: my-node-app
+    env: node
+    plan: free
+    buildCommand: |
+      apt-get update && apt-get install -y build-essential python3 libssl-dev libffi-dev libodbc1 unixodbc-dev
+      npm install
+    startCommand: npm start
